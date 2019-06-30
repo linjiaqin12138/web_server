@@ -22,7 +22,7 @@ namespace My_Web{
         public:
             TCP_Server(int port,std::string ip_addr = "127.0.0.1");
             
-            uint8_t send(std::string& mess);
+            uint8_t send(std::string mess);
             
             void close();
         private:
