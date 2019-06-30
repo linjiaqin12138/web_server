@@ -1,0 +1,1 @@
+ADD_LIBRARY(server SHARED server.cpp)

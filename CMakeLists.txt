@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8)
+PROJECT(MYWEB)
+INCLUDE_DIRECTORIES(include)
+ADD_SUBDIRECTORY(src)
+add_executable(main main.cpp)
+add_executable(main_client main_client.cpp)
+target_link_libraries(main server)
+target_link_libraries(main_client server)

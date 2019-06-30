@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/server.h
+stdio.h
+-
+stdlib.h
+-
+sys/socket.h
+-
+string.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+sys/types.h
+-
+string
+-
+
+/home/linjiaqin/study/web/myweb/main_client.cpp
+server.h
+/home/linjiaqin/study/web/myweb/server.h
+string
+-
+iostream
+-
+
