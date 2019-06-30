@@ -1,7 +1,0 @@
-/home/linjiaqin/study/web/myweb/build/CMakeFiles/rebuild_cache.dir
-/home/linjiaqin/study/web/myweb/build/CMakeFiles/main_client.dir
-/home/linjiaqin/study/web/myweb/build/CMakeFiles/edit_cache.dir
-/home/linjiaqin/study/web/myweb/build/CMakeFiles/main.dir
-/home/linjiaqin/study/web/myweb/build/src/CMakeFiles/edit_cache.dir
-/home/linjiaqin/study/web/myweb/build/src/CMakeFiles/rebuild_cache.dir
-/home/linjiaqin/study/web/myweb/build/src/CMakeFiles/server.dir
