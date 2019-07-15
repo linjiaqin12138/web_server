@@ -13,7 +13,7 @@ void ErrorHanding(std::string mess){
     exit(1);
 }
 int main(int argc,char** argv){
-    if(argc<3) ErrorHanding("miss port and ip address");
+    if(argc<2) ErrorHanding("miss port");
     char message[BUFF_SIZE];
     int serv_sock;
     int str_len;
@@ -26,14 +26,12 @@ int main(int argc,char** argv){
       
     serv_sock = socket(PF_INET,SOCK_DGRAM,0);
     if(serv_sock == -1) ErrorHanding("socket error");
-    while(1){
-        fputs("Insert message(q to quit)",stdout);
-        fgets(message,sizeof(message),stdin); //回车也会被加进来
-        if(!strcmp(message,"q\n") || !strcmp(message,"Q\n")) break;
-        sendto(serv_sock,message,strlen(message),0,(sockaddr*)&serv_addr,sizeof(serv_addr));
+    if(bind(serv_sock,(sockaddr*)&serv_addr,sizeof(serv_addr))==-1) ErrorHanding("bind error");
+    else printf("Connecting ...\n");
+    for(int i=0;i<3;i++){
+        sleep(5);
         str_len = recvfrom(serv_sock,message,BUFF_SIZE,0,(sockaddr*)&clnt_addr,&clnt_addr_sz);
-        message[str_len] = 0;
-        printf("Message from server:%s\n",message); 
+        printf("Message %d : %s\n",i+1,message);
     }
     close(serv_sock);
     return 0;
